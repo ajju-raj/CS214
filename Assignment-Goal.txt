@@ -1,0 +1,5 @@
+Motto: What I have done in this assignment?
+
+Response: I have tried to Implement the 2-Bit-Dynamic Predictor. And also tried to add Data Forwarding. 
+
+Issue: I had implemented the code and it's running fine and It's CPI has changed from 1.317 -> 1.306 , This shows that change is of no use and also unable to debug and get how this can be made more better.

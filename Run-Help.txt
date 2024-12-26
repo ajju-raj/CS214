@@ -1,0 +1,41 @@
+HOW TO RUN THE CODE GIVEN IN SCALA:
+----------------------------------------------------------
+
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ source env.sh
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ echo $RISCV
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ cd ~/chipyard/sims/verilator
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ make CONFIG=Sodor5StageConfig
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ make CONFIG=Sodor5StageConfig run-binary BINARY=~/chipyard/generators/riscv-sodor/riscv-bmarks/towers.riscv
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ cd output/chipyard.harness.TestHarness.Sodor5StageConfig/
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator/output/chipyard.harness.TestHarness.Sodor5StageConfig$ ls
+
+towers.log  towers.out
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator/output/chipyard.harness.TestHarness.Sodor5StageConfig$ cd ../../
+
+(/home/raj/chipyard/.conda-env) raj@raj:~/chipyard/sims/verilator$ ~/chipyard/generators/riscv-sodor/scripts/tracer.py output/chipyard.harness.TestHarness.Sodor5StageConfig/towers.out
+
+Stats:
+
+CPI          : 1.306
+IPC          : 0.766
+Cycles       : 27446
+Instructions : 21023
+Bubbles      : 6424
+
+Instruction Breakdown:
+% Arithmetic  : 40.670 %
+% Ld/St       : 42.591 %
+% Branch/Jump : 16.073 %
+% Misc.       : 0.666 %
+
+-------------------------------------------------------------------------
+
+
